@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   nextcloud:
-    image: nextcloud:latest
+    image: nextcloud:33.0.1
     container_name: nextcloud-app
     restart: unless-stopped
     environment:
@@ -28,7 +28,7 @@ services:
       - nextcloud-internal
 
   nextcloud-db:
-    image: mariadb:10.11
+    image: mariadb:lts
     container_name: nextcloud-db
     restart: unless-stopped
     environment:
